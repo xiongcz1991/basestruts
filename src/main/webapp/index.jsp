@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>hello struts</title>
+    <s:head/>
 </head>
 <body>
 <h1>hello world</h1>
@@ -19,5 +20,16 @@
     <s:textfield name="username"/>
     <s:submit value="提交"/>
 </s:form>
+
+<s:form action="register" method="POST">
+    <s:textfield name="user.firstName"/>
+    <s:textfield name="user.lastName"/>
+    <s:textfield name="user.email"/>
+    <s:submit value="提交"/>
+</s:form>
+
+<s:property value="user.firstName"></s:property>
+<s:property value="user.lastName"></s:property>
+<s:property value="user.email"></s:property>
 </body>
 </html>
