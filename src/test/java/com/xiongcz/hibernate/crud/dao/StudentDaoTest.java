@@ -1,6 +1,6 @@
-package com.xiongcz.hibernate.dao;
+package com.xiongcz.hibernate.crud.dao;
 
-import com.xiongcz.hibernate.entity.Student;
+import com.xiongcz.hibernate.crud.entity.Student;
 import com.xiongcz.hibernate.utils.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

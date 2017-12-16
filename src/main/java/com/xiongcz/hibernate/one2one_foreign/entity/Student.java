@@ -1,9 +1,11 @@
-package com.xiongcz.hibernate.entity;
+package com.xiongcz.hibernate.one2one_foreign.entity;
 
 public class Student {
     private int id;
     private String name;
     private int age;
+
+    private StudentCard studentCard;
 
     public int getId() {
         return id;
@@ -29,12 +31,21 @@ public class Student {
         this.age = age;
     }
 
+    public StudentCard getStudentCard() {
+        return studentCard;
+    }
+
+    public void setStudentCard(StudentCard studentCard) {
+        this.studentCard = studentCard;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", studentCard=" + studentCard +
                 '}';
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiongcz.hibernate.onetomany.entity">
+    <class name="Clazz" table="clazz_one2many">
+        <id name="cid" column="cid">
+            <generator class="native"></generator>
+        </id>
+        <property name="cname" column="cname"></property>
+<!--        <set name="students">
+            <key column="cid"></key>
+            <one-to-many class="com.xiongcz.hibernate.onetomany.entity.Student"></one-to-many>
+        </set>-->
+        <list name="students" cascade="save-update,persist">
+            <key column="cid"></key>
+            <index column="id"></index>
+            <one-to-many class="com.xiongcz.hibernate.onetomany.entity.Student"></one-to-many>
+        </list>
+
+    </class>
+</hibernate-mapping>

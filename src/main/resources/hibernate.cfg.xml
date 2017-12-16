@@ -16,7 +16,13 @@
 
         <property name="show_sql">true</property>
 
-        <mapping resource="Student.hbm.xml"></mapping>
+        <mapping resource="com/xiongcz/hibernate/crud/entity/Student.hbm.xml"></mapping>
+        <mapping resource="com/xiongcz/hibernate/one2one/entity/Student.hbm.xml"></mapping>
+        <mapping resource="com/xiongcz/hibernate/one2one/entity/StudentCard.hbm.xml"></mapping>
+        <mapping resource="com/xiongcz/hibernate/one2one_foreign/entity/Student.hbm.xml"></mapping>
+        <mapping resource="com/xiongcz/hibernate/one2one_foreign/entity/StudentCard.hbm.xml"></mapping>
+        <mapping resource="com/xiongcz/hibernate/onetomany/entity/Student.hbm.xml"></mapping>
+        <mapping resource="com/xiongcz/hibernate/onetomany/entity/Clazz.hbm.xml"></mapping>
         <!--<mapping resource="org/hibernate/test/legacy/Simple.hbm.xml"/>
         <class-cache
                 class="org.hibernate.test.legacy.Simple"

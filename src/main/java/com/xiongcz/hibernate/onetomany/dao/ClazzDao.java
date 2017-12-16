@@ -1,39 +1,35 @@
-package com.xiongcz.hibernate.dao;
+package com.xiongcz.hibernate.onetomany.dao;
 
-import com.xiongcz.hibernate.entity.Student;
+
+import com.xiongcz.hibernate.onetomany.entity.Clazz;
 import org.hibernate.Session;
 
-public class StudentDao {
+public class ClazzDao {
     private Session session;
-    public void save(Student s){
+    public void save(Clazz clazz){
         session.beginTransaction();
-        /*Student student = new Student();
-        student.setId(1);
-        student.setName("joker");
-        student.setAge(21);*/
-        session.save(s);
+        session.save(clazz);
         session.getTransaction().commit();
     }
 
-    public Student getStudent(int id){
+    public Clazz getStudent(int id){
         session.beginTransaction();
-        Student student = session.get(Student.class, id);
+        Clazz clazz = session.get(Clazz.class, id);
         session.getTransaction().commit();
-
-        return student;
+        return clazz;
     }
 
     public void delStudent(int id){
         session.beginTransaction();
-        Student student = new Student();
-        student.setId(id);
-        session.delete(student);
+        Clazz clazz = new Clazz();
+        clazz.setCid(id);
+        session.delete(clazz);
         session.getTransaction().commit();
     }
 
-    public void modStudent(Student s){
+    public void modStudent(Clazz clazz){
         session.beginTransaction();
-        session.update(s);
+        session.update(clazz);
         session.getTransaction().commit();
     }
 
